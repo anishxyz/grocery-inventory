@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1>{{ action }} Item</h1>
+<form method="post">
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    {{ form.name.label }} <span class="emoji">📦</span>
+    {{ form.name(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.quantity.label }} <span class="emoji">🔢</span>
+    {{ form.quantity(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.price.label }} <span class="emoji">💲</span>
+    {{ form.price(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.submit(class="btn btn-primary") }}
+  </div>
+</form>
+{% endblock %}
